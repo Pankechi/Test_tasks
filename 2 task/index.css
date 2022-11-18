@@ -1,0 +1,678 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+  background-color: #0E1014;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  margin: 0 150px;
+  flex-direction: column;
+  gap: 94px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+/*геометрия и градиенты*/
+.gradient_violet {
+  position: absolute;
+  width: 259px;
+  height: 259px;
+  left: 602px;
+  top: -154px;
+  background: #833AB4;
+  opacity: 0.5;
+  filter: blur(196px);
+  z-index: 1;
+}
+
+.gradient_red {
+  position: absolute;
+  width: 311px;
+  height: 311px;
+  left: -102px;
+  top: 251px;
+  background: #961A1A;
+  opacity: 0.5;
+  filter: blur(196px);
+}
+
+.gradient_red_mobile, .gradient_violet_mobile, .gradient_yellow_mobile {
+  display: none;
+}
+
+.red-ball_mobile, .violet-ball_mobile {
+  display: none;
+}
+
+.ball_big {
+  position: absolute;
+  width: 83px;
+  height: 83px;
+  left: 519px;
+  top: 83px;
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.ball_medium {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 868px;
+  top: -2px;
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+  filter: blur(5px);
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.ball_small {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 851px;
+  top: 517px;
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+  filter: blur(2.5px);
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+
+/*шапка*/
+.head {
+  height: 73px;
+  display: flex;
+  padding-top: 15px;
+  margin-top: 46px;
+  justify-content: space-between;
+  gap: 130px;
+}
+
+.head__left {
+  display: flex;
+  gap: 52.96px;
+}
+
+.head__company__logo {
+  display: flex;
+  gap: 8.12px;
+  align-items: center;
+
+}
+
+.logo {
+  width: 35.05px;
+  height: 24px;
+}
+
+.name {
+  width: 95.87px;
+  height: 14.14px;
+}
+
+.head__company {
+  display: flex;
+  gap: 14.86px;
+  flex-direction: column;
+}
+
+.head__company__about {
+  height: 24px;
+  width: 165px;
+  left: 0px;
+  top: 45px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #E4E5EA;
+
+}
+
+.head__menue__list {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.head__menue__list__item {
+  list-style: none;
+  text-decoration: none;
+}
+
+.list__item__link {
+  color: #E4E5EA;
+  text-decoration: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.head__contacts {
+  display: flex;
+  gap: 24px;
+}
+
+.contacts__icons {
+  display: flex;
+  gap: 34px
+}
+
+.contacts__phone-number {
+  color: #E4E5EA;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+}
+
+.contacts__tg {
+  background-image: url(./img/tg.svg);
+  height: 13.98869800567627px;
+  width: 19.679691px;
+  background-repeat: no-repeat;
+}
+
+.contacts__phone {
+  background-image: url(./img/phone.svg);
+  height: 13.98869800567627px;
+  width: 16.679691314697266px;
+  background-repeat: no-repeat;
+}
+
+.contacts__wa {
+  background-image: url(./img/wa.svg);
+  height: 15.988698px;
+  width: 16.679691314697266px;
+  background-repeat: no-repeat; 
+}
+
+
+/*мейн*/
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-content__left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.big-text_basic {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  color: #E4E5EA;
+}
+
+.big-text_gradient {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.left__bottom-text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #E4E5EA;
+}
+
+.main-content__right {
+ display: flex;
+ flex-direction: column;
+ gap: 40px;
+ align-items: flex-end;
+}
+
+.right-text {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+text-align: right;
+color: #E4E5EA;
+}
+
+.right-text_gradient {
+  background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.right__gift-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 31px;
+}
+
+.gift {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gift__head {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+text-align: right;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+color: #E4E5EA;
+
+}
+
+.gift__text {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+text-align: right;
+color: #E4E5EA;
+}
+
+.right__gift-info_mobile {
+  display: none;
+}
+
+.right__button {
+width: 262px;
+height: 61px;
+left: 0px;
+top: 0px;
+background: #4077F3;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #E4E5EA;
+}
+
+
+/*ботттом*/
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom__content {
+  display: flex;
+  gap: 98px;
+}
+
+.content__block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.block__head {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #656566;
+}
+
+.block__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item__link {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #E4E5EA;
+  text-decoration: none;
+}
+
+.block__wrapper {
+  display: flex;
+  gap: 52px;
+}
+
+.bottom__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 21px;
+}
+
+.bottom__icons {
+  display: flex;
+  gap: 14px;
+}
+
+/*футер*/
+
+.content__footer {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer__text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  color: #E4E5EA;
+}
+
+.footer__link {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  color: #E4E5EA;
+}
+
+
+/*мобильные стили*/
+@media screen and (max-width: 321px)  {
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #0E1014;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    gap: 0;
+  }
+
+  /*геометрия и градиенты*/
+  .gradient_violet, .gradient_red, .ball_big, .ball_medium, .ball_small {
+    display: none
+  }
+
+  .gradient_violet_mobile {
+    position: absolute;
+    width: 130px;
+    height: 259px;
+    left:  190px;
+    top: 107px;
+    overflow: hidden;
+    background: #833AB4;
+    opacity: 0.5;
+    filter: blur(196px);
+    display: inline-block;
+    }
+
+  .gradient_red_mobile {
+    position: absolute;
+    width: 211px;
+    height: 210px;
+    left: -55px;
+    top: 241px;
+    background: #961A1A;
+    opacity: 0.5;
+    filter: blur(196px);
+    display: block;
+    overflow: hidden;
+    overflow: hidden;
+  }
+
+  .gradient_yellow_mobile {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -66px;
+    top: 519px;
+    display: block;
+    overflow: hidden;
+    background: #FCB045;
+    opacity: 0.4;
+    filter: blur(196px);
+    overflow: hidden;
+  }
+
+  .red-ball_mobile {
+    display: block;
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    left: 29px;
+    top: 460px;
+    background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+    backdrop-filter: blur(2px);
+    filter: blur(5px);
+    border-radius: 50%;
+  }
+
+  .violet-ball_mobile {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 280px;
+    top: 293px;
+    background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+    filter: blur(5px);
+    backdrop-filter: blur(2px);
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+  }
+
+  /*хед*/
+  .head {
+    height: 55px;
+    display: flex;
+    padding-top: 0px;
+    margin-top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 14px;
+  }
+
+  .head__company {
+    display: none;
+  }
+
+  .head__contacts {
+    display: none;
+  }
+
+  .head__menue__list {
+    gap: 16px;
+  }
+
+  .list__item__link {
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  .head__menue__list li:nth-child(5) {
+    display: none;
+  }
+
+  /*мейн*/
+  .main-content {
+    flex-direction: column;
+    gap: 45px;
+    padding: 40px 0 59px 14px;
+    background-color: #1E1E1E;
+    height: 445px;
+    
+  }
+
+  .main-content__left {
+    gap: 15px;
+  }
+  
+  .big-text_basic {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .right__button {
+    display: none;
+  }
+
+  .main-content__right {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .right-text {
+    text-align: left;
+  }
+
+  .right__gift-info {
+    display: none;
+  }
+
+  .right__gift-info_mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 14px;
+  }
+
+  .gift__text_mobile {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #E4E5EA;
+    position: relative;
+    margin-left: 15px;
+  }
+
+  .gift__text_mobile::before {
+    content: " ";
+    width: 10px;
+    background-image: linear-gradient(#FCB045,
+    #FD1D1D);
+    position: absolute;
+    display: block;
+    height: 1px;
+    top: 7px;
+    left: -14px;
+  }
+
+  /*боттом*/
+  .bottom {
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 50px;
+      padding: 35px 0 0 14px;
+  }
+
+  .bottom__content {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .bottom__contacts {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .block__head {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .item__link {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+
+
+  /*футер*/
+  .content__footer {
+    margin-bottom: 60px;
+    padding-left: 14px;
+  }
+
+  .footer__text {
+    text-align: left;
+  }
+
+  .footer__link {
+    text-align: left;
+  }
+}
